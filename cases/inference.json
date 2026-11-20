@@ -1,0 +1,494 @@
+[
+  {
+    "id": "i01",
+    "skill": "causal attribution",
+    "tier": "anchor",
+    "question": "Which change does the checkout trial support as a way to shorten sales?",
+    "options": [
+      "Giving the lane a lookup card while keeping staffing the same.",
+      "Giving the lane an extra clerk while keeping the lookup procedure the same.",
+      "Giving the lane a lookup card and an extra clerk together, with their individual contributions unresolved.",
+      "Letting clerks choose whether to use the lookup card, regardless of how many clerks are on duty."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "Each morning at Harbor Books a coin toss assigned one checkout lane to the trial setup and one to the comparison setup, with shoppers directed alternately to the two lanes.",
+          "Before the trial, the manager timed several sales at the two lanes using their usual staffing and price lists.",
+          "The trial lane had a new price lookup card and an extra clerk, while the comparison lane had the usual price list and its usual single clerk.",
+          "Across sixty mornings the trial lane averaged eighteen seconds less per sale than the comparison lane.",
+          "At the staff meeting the cashiers demonstrated how they found a price on the new card."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "The coin toss assigned the setups, and sales were faster under the setup that changed both staffing and price lookup. The trial supplies one comparison for those two changes together."
+      },
+      {
+        "sentences": [
+          "Each morning at Harbor Books a coin toss assigned one checkout lane to the trial setup and one to the comparison setup, with shoppers directed alternately to the two lanes.",
+          "Before the trial, the manager timed several sales at the two lanes using their usual staffing and price lists.",
+          "The trial lane had a new price lookup card and an extra clerk, while the comparison lane had the usual price list and the same extra staffing.",
+          "Across sixty mornings the trial lane averaged eighteen seconds less per sale than the comparison lane.",
+          "At the staff meeting the cashiers demonstrated how they found a price on the new card."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "Both lanes had extra staffing. The coin toss determined which lane received the new card, and that lane had shorter sales on average."
+      }
+    ]
+  },
+  {
+    "id": "i02",
+    "skill": "causal attribution",
+    "tier": "anchor",
+    "question": "What does the ferry comparison establish about the new tide alert?",
+    "options": [
+      "Lateness fell after the alert and a timetable change began together, leaving their contributions unresolved.",
+      "The fall in lateness measures the alert's effect after the comparison accounts for the new timetable.",
+      "The fall in lateness measures how much the alert shortened the ferries' actual crossing times.",
+      "The new timetable accounts for the entire fall because the alert left the published arrival times unchanged."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "Aster Ferry began broadcasting its tide alert on 1 April, the morning it added ten minutes to the advertised duration of every crossing.",
+          "Dispatchers classified a sailing as late when it docked after its advertised arrival time.",
+          "On the ferry's only route, dispatch records put the share of late sailings at 17% in the three months before 1 April and 11% in the three months after.",
+          "The same vessels served the route throughout those six months."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            3
+          ]
+        ],
+        "why": "The decline spans the introduction of both changes. Comparing the two periods gives no separate estimate for the alert."
+      },
+      {
+        "sentences": [
+          "Aster Ferry began broadcasting its tide alert on 1 April, the morning it added ten minutes to the advertised duration of every crossing.",
+          "Dispatchers classified a sailing as late when it docked after its advertised arrival time.",
+          "On the ferry's only route, an inspector's independent dockside log put the share of late sailings at 17% in the three months before 1 April and 11% in the three months after.",
+          "The same vessels served the route throughout those six months."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            3
+          ]
+        ],
+        "why": "The inspector supplies an independent record of the decline. Its before-and-after periods still put the alert and timetable change on the same side of the comparison."
+      }
+    ]
+  },
+  {
+    "id": "i03",
+    "skill": "causal attribution",
+    "tier": "stretch",
+    "question": "How should the county interpret the lower summer water use in its published comparison?",
+    "options": [
+      "The difference estimates the effect of offering free installation across households eligible for the offer.",
+      "The difference describes households that chose to install versus those that did not, with households from both offer groups on each side.",
+      "The difference estimates the effect of installation specifically for households that would install only if offered help.",
+      "The difference estimates the effect of an offer specifically for households that would go without a barrel either way."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "A lottery decided which half of Maple County's eligible households received an offer of free rain-barrel installation.",
+          "Both households with offers and households without offers included some who chose to install a barrel and some who chose to go without.",
+          "The water office billed every eligible household on the same quarterly schedule.",
+          "Meter readers recorded water use at every eligible home throughout the summer.",
+          "The published comparison put all households sent an offer in the first group and all households sent none in the second, with lower mean summer use in the first group.",
+          "Inspectors checked a sample of the meter readings against photographs taken by residents."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            5
+          ]
+        ],
+        "why": "The comparison retains the groups the lottery created. The mean difference therefore estimates the effect of receiving an offer, including what households did in response."
+      },
+      {
+        "sentences": [
+          "A lottery decided which half of Maple County's eligible households received an offer of free rain-barrel installation.",
+          "Both households with offers and households without offers included some who chose to install a barrel and some who chose to go without.",
+          "The water office billed every eligible household on the same quarterly schedule.",
+          "Meter readers recorded water use at every eligible home throughout the summer.",
+          "The published comparison put all households with an installed barrel in the first group and all households without one in the second, with lower mean summer use in the first group.",
+          "Inspectors checked a sample of the meter readings against photographs taken by residents."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            2,
+            5
+          ]
+        ],
+        "why": "Households on each side of the offer process made both installation choices. Grouping by installation mixes those households and describes an association with adoption."
+      }
+    ]
+  },
+  {
+    "id": "i04",
+    "skill": "causal attribution",
+    "tier": "intermediate",
+    "question": "What result does the evaluation plan permit for East's February-to-March callback pilot?",
+    "options": [
+      "An estimated reduction of three percentage points after allowing for the change at West.",
+      "An estimated reduction of five percentage points using East's full change over the two months.",
+      "An estimated reduction of two percentage points using West's change over the two months.",
+      "No estimate under the plan because the comparison office offered callbacks during the study window."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The evaluation plan subtracts West's change in hang-ups from East's change to estimate the effect of callbacks, provided West stayed on normal service throughout the comparison.",
+          "When East began offering callbacks on 1 March, its hang-up rate went from 16% in February to 11% in March.",
+          "East's April dashboard reported that callbacks handled after a hang-up were counted as return calls.",
+          "At West the hang-up rate went from 14% in February to 12% in March.",
+          "West's switchboard log says it ran normal service until its callback option first took calls on 1 April.",
+          "Both offices published their rates on 4 April."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            2,
+            4,
+            5
+          ]
+        ],
+        "why": "West supplied an untreated comparison for both months. East fell five points and West fell two, giving the plan's estimated three-point reduction."
+      },
+      {
+        "sentences": [
+          "The evaluation plan subtracts West's change in hang-ups from East's change to estimate the effect of callbacks, provided West stayed on normal service throughout the comparison.",
+          "When East began offering callbacks on 1 March, its hang-up rate went from 16% in February to 11% in March.",
+          "East's April dashboard reported that callbacks handled after a hang-up were counted as return calls.",
+          "At West the hang-up rate went from 14% in February to 12% in March.",
+          "West's switchboard log says it ran normal service until its callback option first took calls on 1 March.",
+          "Both offices published their rates on 4 April."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            5
+          ]
+        ],
+        "why": "West started callbacks in March. This violates the plan's condition for using West to estimate what East would have experienced that month under normal service."
+      }
+    ]
+  },
+  {
+    "id": "i05",
+    "skill": "causal attribution",
+    "tier": "stretch",
+    "question": "Which heat exposures did the published comparison of sheet stiffness actually contrast?",
+    "options": [
+      "Newly connected heat against a press clear of the previous day's heating effect.",
+      "Continuous two-day heating against a press clear of the previous day's heating effect.",
+      "Newly connected heat against a press still affected by the previous day's heat.",
+      "Continuous two-day heating against a press still affected by the previous day's heat."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "During a pressroom trial, a random draw each morning assigned a portable preheater to one of two embossing presses.",
+          "The published comparison used only the two presses' first runs each morning, both completed within ten minutes of the new assignment.",
+          "At assignment time on each morning counted, the operator disconnected the running heater from yesterday's press and connected it to the press that had gone without it the day before.",
+          "A humidity logger recorded the pressroom at the end of each shift, ten hours after the first runs.",
+          "A bench test with the same equipment found that the heater's effect on sheet stiffness lasted two hours after disconnection.",
+          "A trade journal reproduced the stiffness averages from the pressroom's readings of those runs."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "why": "The heater switched presses on the mornings counted. Ten minutes was inside the two-hour carryover period, so the press without the heater still had residual exposure."
+      },
+      {
+        "sentences": [
+          "During a pressroom trial, a random draw each morning assigned a portable preheater to one of two embossing presses.",
+          "The published comparison used only the two presses' first runs each morning, both completed within ten minutes of the new assignment.",
+          "At assignment time on each morning counted, the operator disconnected the running heater from yesterday's press and connected it to the press that had gone without it the day before.",
+          "A humidity logger recorded the pressroom at the end of each shift, ten hours after the first runs.",
+          "A bench test with the same equipment found that the heater's effect on sheet stiffness lasted two hours after disconnection.",
+          "A trade journal reproduced the stiffness averages from its own independent readings of those runs."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "why": "Independent readings cover the same first runs after each switch. The connected press had just gained the heater, and the other press was within the measured carryover period."
+      }
+    ]
+  },
+  {
+    "id": "i06",
+    "skill": "conflicting records",
+    "tier": "anchor",
+    "question": "Which stallholder limit did the market committee adopt for November?",
+    "options": [
+      "The committee adopted a limit of 51 stallholders.",
+      "The committee adopted a limit of 48 stallholders.",
+      "The records leave the committee's choice between the two schedules unresolved.",
+      "The committee adopted a limit of 54 stallholders."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The archive holds two signed schedules for the November night market, one allowing 48 stallholders and one allowing 54.",
+          "The committee minutes identify the schedule bearing a copper star as the one adopted for November.",
+          "The archivist's photograph shows that the schedule allowing 48 stallholders is the one with the copper star.",
+          "A reporter counted 51 stalls trading on the night of the market."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            2,
+            3
+          ]
+        ],
+        "why": "The minutes identify the adoption mark, and the photograph links it to the 48-stallholder schedule. The reporter counted stalls in operation."
+      },
+      {
+        "sentences": [
+          "The archive holds two signed schedules for the November night market, one allowing 48 stallholders and one allowing 54.",
+          "The committee minutes identify the schedule bearing a copper star as the one adopted for November.",
+          "The archivist's photograph shows that the schedule allowing 54 stallholders is the one with the copper star.",
+          "A reporter counted 51 stalls trading on the night of the market."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            2,
+            3
+          ]
+        ],
+        "why": "The minutes identify the adoption mark, and the photograph links it to the 54-stallholder schedule. The reporter counted stalls in operation."
+      }
+    ]
+  },
+  {
+    "id": "i07",
+    "skill": "conflicting records",
+    "tier": "intermediate",
+    "question": "How does the harbor pilot's entry bear on the engineers' disagreement?",
+    "options": [
+      "It corroborates the higher count with a second observation of the same beacons at the disputed time.",
+      "It corroborates the lower count once the two beacons returned to service between rounds are deducted.",
+      "It shows that exactly two beacons changed status between the engineers' round and the pilot's round.",
+      "It independently documents the beacons at a different time, leaving the engineers' disagreement unresolved."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "At noon on 8 May, one of Gull Reach's engineers recorded eight functioning beacons and a second engineer recorded ten on the same stretch of water.",
+          "A harbor pilot independently counted ten working beacons on that stretch at noon on 9 May.",
+          "The engineer with the lower count filed a handwritten sheet and the engineer with the higher count used a tablet.",
+          "The maintenance roster listed no scheduled repairs on either 8 or 9 May."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2
+          ]
+        ],
+        "why": "The pilot observed the same stretch a day later. The maintenance roster gives no observation of beacon status at the earlier noon."
+      },
+      {
+        "sentences": [
+          "At noon on 8 May, one of Gull Reach's engineers recorded eight functioning beacons and a second engineer recorded ten on the same stretch of water.",
+          "A harbor pilot independently counted ten working beacons on that stretch at dusk on 8 May.",
+          "The engineer with the lower count filed a handwritten sheet and the engineer with the higher count used a tablet.",
+          "The maintenance roster listed no scheduled repairs on either 8 or 9 May."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2
+          ]
+        ],
+        "why": "The pilot observed the same stretch on the disputed date, several hours after noon. The record allows the beacons' status to have changed in the interval."
+      }
+    ]
+  },
+  {
+    "id": "i08",
+    "skill": "conflicting records",
+    "tier": "stretch",
+    "question": "After Amendment 15, what is the theater's official paid-seat count for Thursday's matinee?",
+    "options": [
+      "704, the Thursday figure published in Amendment 14.",
+      "732, the Thursday figure in the volunteer's door count.",
+      "740, the Thursday figure in the preliminary return.",
+      "Either 704 or 740, with Thursday's official figure still open."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The Lantern Theater's preliminary matinee returns listed 740 paid seats on Thursday and 610 on Friday.",
+          "Amendment 14 replaced the two matinee totals with 704 for Thursday and 601 for Friday.",
+          "Amendment 15 reinstated the preliminary figure for the performance named on its attachment and left the other entry in Amendment 14 in force.",
+          "The booking agent's Wednesday matinee settlement still showed the figure in the preliminary return.",
+          "A photograph of the attachment identifies the Thursday matinee.",
+          "A volunteer counted 732 people coming through the doors on Thursday, including holders of complimentary seats."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            3,
+            5
+          ]
+        ],
+        "why": "The attachment selects Thursday for reinstatement. Its preliminary paid-seat figure was 740."
+      },
+      {
+        "sentences": [
+          "The Lantern Theater's preliminary matinee returns listed 740 paid seats on Thursday and 610 on Friday.",
+          "Amendment 14 replaced the two matinee totals with 704 for Thursday and 601 for Friday.",
+          "Amendment 15 reinstated the preliminary figure for the performance named on its attachment and left the other entry in Amendment 14 in force.",
+          "The booking agent's Wednesday matinee settlement still showed the figure in the preliminary return.",
+          "A photograph of the attachment identifies the Friday matinee.",
+          "A volunteer counted 732 people coming through the doors on Thursday, including holders of complimentary seats."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "why": "Only Friday's preliminary figure was reinstated. Thursday retains the 704 paid seats in Amendment 14."
+      }
+    ]
+  },
+  {
+    "id": "i09",
+    "skill": "conflicting records",
+    "tier": "stretch",
+    "question": "How does the municipal chart bear on the almanac's side of the Mill Yard temperature dispute?",
+    "options": [
+      "The chart corroborates the notebook after the thermometers' stated tolerance is taken into account.",
+      "The chart corroborates the almanac's 31 degrees with a separate thermometer at the disputed site.",
+      "The chart reports 31 degrees from the almanac's own thermometer, adding no separate measurement.",
+      "The chart's source remains unclear because its printed code has belonged to more than one thermometer."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "A surveyor's notebook recorded 28 degrees for the overnight maximum at Mill Yard on 6 August.",
+          "The disputed almanac entry gives 31 degrees, transcribed from Mill Yard's recorder M.",
+          "The municipal chart of the overnight maximum at Mill Yard on 6 August also reads 31 degrees, with source code W6.",
+          "The instrument register assigns W6 to recorder M through 31 July and to a separate Mill Yard thermometer from 1 August onward.",
+          "The municipal lab describes both thermometers as accurate to half a degree."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "why": "The dated code maps the chart to a second thermometer on 6 August. It supplies a separate reading in agreement with M, though the packet leaves the reason for the notebook's discrepancy open."
+      },
+      {
+        "sentences": [
+          "A surveyor's notebook recorded 28 degrees for the overnight maximum at Mill Yard on 6 August.",
+          "The disputed almanac entry gives 31 degrees, transcribed from Mill Yard's recorder M.",
+          "The municipal chart of the overnight maximum at Mill Yard on 6 August also reads 31 degrees, with source code W6.",
+          "The instrument register assigns W6 to recorder M through 31 August and to a separate Mill Yard thermometer from 1 September onward.",
+          "The municipal lab describes both thermometers as accurate to half a degree."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "why": "W6 still referred to M on 6 August. The chart and almanac trace to that one instrument, so their agreement adds no separate reading against the notebook."
+      }
+    ]
+  },
+  {
+    "id": "i10",
+    "skill": "conflicting records",
+    "tier": "intermediate",
+    "question": "Which judgment about the disputed grant total follows from the venue steward's log?",
+    "options": [
+      "Both ledgers use totals permitted by the grant's counting rule.",
+      "The steward's log corroborates the arts council's ledger under the grant rule.",
+      "Six events still have uncertain grant eligibility, leaving both ledgers unconfirmed.",
+      "The steward's log corroborates the studio's ledger under the grant rule."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "For June's restoration grant, the arts council's ledger credits Far Loom with 24 sessions and the studio's ledger credits it with 30.",
+          "Grant instructions count each workshop held once, including free workshops, and exclude rehearsals.",
+          "The venue steward's independent door log covers every use of the studio in June and lists 24 full-price workshops and six free workshops.",
+          "The treasurer paid the grant in July using the arts council's ledger."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "why": "All thirty logged uses were workshops eligible under the grant rule. Thirty is the figure claimed in the studio ledger."
+      },
+      {
+        "sentences": [
+          "For June's restoration grant, the arts council's ledger credits Far Loom with 24 sessions and the studio's ledger credits it with 30.",
+          "Grant instructions count each workshop held once, including free workshops, and exclude rehearsals.",
+          "The venue steward's independent door log covers every use of the studio in June and lists 24 full-price workshops and six rehearsals.",
+          "The treasurer paid the grant in July using the arts council's ledger."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "why": "The six rehearsals fall outside the grant rule. The twenty-four eligible workshops match the arts council's ledger."
+      }
+    ]
+  }
+]

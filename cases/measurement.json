@@ -1,0 +1,504 @@
+[
+  {
+    "id": "m01",
+    "skill": "measurement independence",
+    "tier": "anchor",
+    "question": "Which steps did the reporter check, and whose observations underlie her result?",
+    "options": [
+      "She repeated the clinic’s means and percentage as published, all based on staff timings.",
+      "She calculated the percentage from the published means, which derive from staff timings.",
+      "She calculated both means and the percentage from waits timed by the clinic staff.",
+      "She calculated both means and the percentage from waits she timed herself."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "At Briar Lane Clinic, staff timed the waits underlying both the monthly bulletin and the individual visit register.",
+          "The bulletin put the May mean at 50 minutes and the June mean at 35 minutes.",
+          "A reporter put the decrease at 30 percent.",
+          "She took the two means from the bulletin and calculated the decrease relative to May."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            4
+          ]
+        ],
+        "why": "The reporter checked the change from 50 to 35, or 15/50 = 30%. Her inputs were the clinic's published averages. The individual waits were timed by staff."
+      },
+      {
+        "sentences": [
+          "At Briar Lane Clinic, staff timed the waits underlying both the monthly bulletin and the individual visit register.",
+          "The bulletin put the May mean at 50 minutes and the June mean at 35 minutes.",
+          "A reporter put the decrease at 30 percent.",
+          "She took all the individual waits from the register, calculated both monthly means and calculated the decrease relative to May."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            4
+          ]
+        ],
+        "why": "The reporter checked the averaging step as well as the 30% calculation. The underlying timings still came from clinic staff."
+      }
+    ]
+  },
+  {
+    "id": "m02",
+    "skill": "measurement independence",
+    "tier": "intermediate",
+    "question": "How does the college result bear on a possible error in the elevation assigned to the blue line?",
+    "options": [
+      "The peak readings were taken separately, but a blue-line error would enter both results through their common reference.",
+      "A single set of peak readings was converted using two elevation references, allowing the blue-line assignment to be checked.",
+      "Both the peak readings and the elevation reference were copied, so the second result checks only the copying.",
+      "The peak readings and their elevation references were obtained separately, so the comparison can reveal a blue-line offset."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "To give its peak water level on the town elevation scale, Port Alder set its gauge using the assigned elevation of a blue line on the wharf.",
+          "A college crew took peak readings on its own gauge across the slip during the same tide.",
+          "A second gauge at the college dock agreed closely with the college crew's gauge when both were read on an arbitrary zero.",
+          "The two published peaks agreed to within a centimeter.",
+          "The crew set its gauge using the assigned elevation of the blue line on the wharf."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        "why": "The college observed the tide with its own gauge, but both crews used the same assigned elevation. A mistake in that value can shift both peaks together."
+      },
+      {
+        "sentences": [
+          "To give its peak water level on the town elevation scale, Port Alder set its gauge using the assigned elevation of a blue line on the wharf.",
+          "A college crew took peak readings on its own gauge across the slip during the same tide.",
+          "A second gauge at the college dock agreed closely with the college crew's gauge when both were read on an arbitrary zero.",
+          "The two published peaks agreed to within a centimeter.",
+          "The crew set its gauge using a brass disk whose surveyed elevation on the town scale was established independently of the wharf line."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            5
+          ]
+        ],
+        "why": "The college's gauge and its survey reference have separate origins. Agreement therefore bears on a possible blue-line offset, although other errors and local differences in water height could affect the comparison."
+      }
+    ]
+  },
+  {
+    "id": "m03",
+    "skill": "measurement independence",
+    "tier": "intermediate",
+    "question": "Which inputs to the Chronicle's orchard-wide apple share received a second observation?",
+    "options": [
+      "The crop assignments for the entire orchard, with all acreage figures taken from the orchard inventory.",
+      "The eastern crop assignments and eastern acreages, with all western figures taken from the orchard inventory.",
+      "The acreage of every block and the crop assignments for the eastern blocks.",
+      "The crop assignments for the eastern blocks only, with every acreage figure taken from the orchard inventory."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "Gull Orchard published an apple share by adding up the acres in blocks labeled as apples and dividing by total orchard acreage.",
+          "A packing-house clerk weighed the apples leaving the western blocks during harvest.",
+          "In its own calculation, the Chronicle carried over the orchard's acreage for every block.",
+          "The Chronicle's fieldworker walked every eastern block to identify its crop.",
+          "For western blocks the Chronicle took the crop names from the orchard's inventory."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "why": "The eastern walk supplied new observations of crops. Western crop names and acreage throughout came from the orchard."
+      },
+      {
+        "sentences": [
+          "Gull Orchard published an apple share by adding up the acres in blocks labeled as apples and dividing by total orchard acreage.",
+          "A packing-house clerk weighed the apples leaving the western blocks during harvest.",
+          "In its own calculation, the Chronicle carried over the orchard's acreage for every block.",
+          "The Chronicle's fieldworker walked every eastern block to identify its crop.",
+          "For western blocks the Chronicle took the crop names from a packing-house list transcribed from the orchard's inventory."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            3,
+            4,
+            5
+          ]
+        ],
+        "why": "The packing house copied the orchard's crop names. Only the eastern crop assignments were observed again, and the acreage figures throughout still came from the orchard."
+      }
+    ]
+  },
+  {
+    "id": "m04",
+    "skill": "measurement independence",
+    "tier": "anchor",
+    "question": "For the journal's grades, which stages used work carried out independently of the port inspectors?",
+    "options": [
+      "Both photographing the seams and grading them from the images.",
+      "Photographing the seams only, with the grades carried over from the inspectors.",
+      "Grading the seams from the images only, with the photographs carried over from the inspectors.",
+      "Neither stage, because both the photographs and the grades came from the inspectors."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "At Salt Quay, port inspectors photograph each sail during inspection and assign it a seam grade from the image.",
+          "The archive indexes inspection-day photographs by sail number and photographer.",
+          "A trade journal's examiner graded the seams from the archive folder without seeing the port inspectors' grades.",
+          "For each sail the folder held the photograph taken by its port inspector."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            3,
+            4
+          ]
+        ],
+        "why": "The examiner supplied a separate grading judgment. Each judgment used the photograph already taken by a port inspector."
+      },
+      {
+        "sentences": [
+          "At Salt Quay, port inspectors photograph each sail during inspection and assign it a seam grade from the image.",
+          "The archive indexes inspection-day photographs by sail number and photographer.",
+          "A trade journal's examiner graded the seams from the archive folder without seeing the port inspectors' grades.",
+          "For each sail the folder held a photograph taken by the trade journal's photographer alongside its port inspector."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            3,
+            4
+          ]
+        ],
+        "why": "A trade journal photographer captured the seams separately and the examiner graded those images herself. The two teams observed the same sails on the same occasion."
+      }
+    ]
+  },
+  {
+    "id": "m05",
+    "skill": "measurement independence",
+    "tier": "stretch",
+    "question": "What does agreement of the daily totals establish about agreement within the individual channels?",
+    "options": [
+      "The east figures match because one was copied, forcing a match between the separately observed west figures.",
+      "The west figures match because one was copied, forcing a match between the separately observed east figures.",
+      "Each channel has separate observations, and the daily match establishes agreement in each channel individually.",
+      "Each channel has separate observations, and the daily match allows opposing differences between the channels."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "To publish a daily fish total, the estuary office added counts from its own sensors on the east and west channels.",
+          "A separate wildlife survey counted fish using the estuary above both channels the next morning.",
+          "For the east channel the fishing cooperative used a count made by its own observers on the bank.",
+          "For the west channel the cooperative copied the end-of-day count displayed by the receiver on its boat.",
+          "The receiver displayed the feed from the office's west sensor.",
+          "The office also published an hourly graph with the two channels combined.",
+          "The cooperative added its two channel entries and published the same daily total as the office."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            3,
+            4,
+            5,
+            7
+          ]
+        ],
+        "why": "Both west entries are the office sensor's count. Subtracting that same count from the equal totals yields equal east counts, one from a sensor and one from observers."
+      },
+      {
+        "sentences": [
+          "To publish a daily fish total, the estuary office added counts from its own sensors on the east and west channels.",
+          "A separate wildlife survey counted fish using the estuary above both channels the next morning.",
+          "For the east channel the fishing cooperative used a count made by its own observers on the bank.",
+          "For the west channel the cooperative copied the end-of-day count displayed by the receiver on its boat.",
+          "The receiver displayed the feed from a separate sensor the cooperative had installed in the west channel.",
+          "The office also published an hourly graph with the two channels combined.",
+          "The cooperative added its two channel entries and published the same daily total as the office."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            3,
+            4,
+            5,
+            7
+          ]
+        ],
+        "why": "The cooperative made separate observations in both channels. An east difference of any given size could be offset by an opposite west difference, leaving the published sums equal."
+      }
+    ]
+  },
+  {
+    "id": "m06",
+    "skill": "denominators and coverage",
+    "tier": "anchor",
+    "question": "From March to April, how did the approval rate among completed applications change?",
+    "options": [
+      "It rose by 10 percentage points.",
+      "It fell by 20 percentage points.",
+      "It held steady.",
+      "It fell by 10 percentage points."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "In March, Birch Ward approved 60 of its 120 completed applications for repair grants.",
+          "The treasurer's April payment file records 72 grant payments, including awards approved in earlier months.",
+          "In April the register counted 200 applications and recorded 80 approvals. Only completed applications could be approved.",
+          "The only April files outside that count were the month's 40 incomplete applications."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "The rate moved from 60/120 = 50% to 80/200 = 40%, a fall of 10 percentage points."
+      },
+      {
+        "sentences": [
+          "In March, Birch Ward approved 60 of its 120 completed applications for repair grants.",
+          "The treasurer's April payment file records 72 grant payments, including awards approved in earlier months.",
+          "In April the register counted 200 applications and recorded 80 approvals. Only completed applications could be approved.",
+          "The April count included every file, among them the month's 40 incomplete applications."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "There were 200 − 40 = 160 completed April files. Both 60/120 and 80/160 equal 50%."
+      }
+    ]
+  },
+  {
+    "id": "m07",
+    "skill": "denominators and coverage",
+    "tier": "stretch",
+    "question": "From the first to the second quarter, how did the on-time rate move for all parcels as shipped and for a summary giving the two route types equal weight?",
+    "options": [
+      "Both the all-parcel rate and the equal-weight rate rose.",
+      "Both the all-parcel rate and the equal-weight rate fell.",
+      "The all-parcel rate rose and the equal-weight rate fell.",
+      "The all-parcel rate fell and the equal-weight rate rose."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The parcel board publishes local and regional delivery results for the same two route types each quarter.",
+          "In the first quarter 9 of 10 local parcels and 30 of 50 regional parcels arrived on time.",
+          "The service dashboard also reports the median delay among late parcels, with local and regional routes combined.",
+          "In the second quarter 40 of 50 local parcels and 5 of 10 regional parcels arrived on time.",
+          "A shipper survey sampled equal numbers of local and regional senders to ask about missing parcels."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            2,
+            4
+          ]
+        ],
+        "why": "Pooling parcels gives 39/60 = 65% and then 45/60 = 75%. Giving each route half the weight gives (90% + 60%)/2 = 75% and then (80% + 50%)/2 = 65%."
+      },
+      {
+        "sentences": [
+          "The parcel board publishes local and regional delivery results for the same two route types each quarter.",
+          "In the first quarter 9 of 10 local parcels and 30 of 50 regional parcels arrived on time.",
+          "The service dashboard also reports the median delay among late parcels, with local and regional routes combined.",
+          "In the second quarter 40 of 50 local parcels and 8 of 10 regional parcels arrived on time.",
+          "A shipper survey sampled equal numbers of local and regional senders to ask about missing parcels."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            2,
+            4
+          ]
+        ],
+        "why": "Pooling parcels gives 39/60 = 65% and then 48/60 = 80%. Equal route weights give 75% and then (80% + 80%)/2 = 80%."
+      }
+    ]
+  },
+  {
+    "id": "m08",
+    "skill": "denominators and coverage",
+    "tier": "stretch",
+    "question": "Taking the supervisor's slip into account, how could the share of audited callers with at least one qualifying call have changed from April to May?",
+    "options": [
+      "It had to rise.",
+      "It had to fall.",
+      "It had to stay level.",
+      "A rise, a fall and an unchanged share are all possible."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The Fen Street service audited exactly 60 calls in each of April and May.",
+          "Each caller represented in a monthly batch had placed exactly two of its calls.",
+          "The desk's public queue report counts individual calls abandoned before a member of staff answers.",
+          "The service checklist was met on 20 April calls and 28 May calls.",
+          "Some April callers also appear in the May audit.",
+          "The supervisor's slip puts the total number of distinct April callers with at least one qualifying call at 16."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            4,
+            6
+          ]
+        ],
+        "why": "There are 30 callers in each batch. The 28 qualifying May calls could belong to any count from 14 to 28 people. The April count of 16 lies inside that interval."
+      },
+      {
+        "sentences": [
+          "The Fen Street service audited exactly 60 calls in each of April and May.",
+          "Each caller represented in a monthly batch had placed exactly two of its calls.",
+          "The desk's public queue report counts individual calls abandoned before a member of staff answers.",
+          "The service checklist was met on 20 April calls and 28 May calls.",
+          "Some April callers also appear in the May audit.",
+          "The supervisor's slip puts the total number of distinct May callers with at least one qualifying call at 16."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            4,
+            6
+          ]
+        ],
+        "why": "There are 30 callers in each batch. The 20 qualifying April calls could belong to any count from 10 to 20 people. The May count of 16 lies inside that interval."
+      }
+    ]
+  },
+  {
+    "id": "m09",
+    "skill": "denominators and coverage",
+    "tier": "stretch",
+    "question": "What is the tightest range the board can give for the percentage of that week's passengers who tried the pass?",
+    "options": [
+      "Exactly 60%.",
+      "From 44% through 60%, inclusive.",
+      "From 60% through 80%, inclusive.",
+      "From 44% through 80%, inclusive."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "In the weekly pass trial, North Route listed 44 distinct trial passengers and South Route listed 36. These were the only two routes.",
+          "A conductor counted 51 pass presentations on South Route, including repeat trips.",
+          "The transport board counted 100 distinct passengers on the network that week, including passengers who skipped the trial.",
+          "The card-matching run linked 20 travel-card IDs across the two lists, each confirmed to represent a different trial passenger.",
+          "The fare office also matched 12 passengers across the two routes during the week before the trial.",
+          "Every trial passenger used a single unique travel-card ID on every trip, and the matching process covered every ID on both lists."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            3,
+            4,
+            6
+          ]
+        ],
+        "why": "The overlap is exactly 20, so the two lists contain 44 + 36 − 20 = 60 distinct trial passengers. The network denominator is 100."
+      },
+      {
+        "sentences": [
+          "In the weekly pass trial, North Route listed 44 distinct trial passengers and South Route listed 36. These were the only two routes.",
+          "A conductor counted 51 pass presentations on South Route, including repeat trips.",
+          "The transport board counted 100 distinct passengers on the network that week, including passengers who skipped the trial.",
+          "The card-matching run linked 20 travel-card IDs across the two lists, each confirmed to represent a different trial passenger.",
+          "The fare office also matched 12 passengers across the two routes during the week before the trial.",
+          "The matching process covered registered travel cards only. Additional trial passengers could have used different cash-ticket IDs on the two routes."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            3,
+            4,
+            6
+          ]
+        ],
+        "why": "The confirmed overlap is 20, and the smaller list puts its maximum at 36. Subtracting those endpoints from 80 gives a range of 44 to 60 distinct trial passengers out of 100."
+      }
+    ]
+  },
+  {
+    "id": "m10",
+    "skill": "denominators and coverage",
+    "tier": "intermediate",
+    "question": "Allowing each unmeasured meter to have been either inside or outside tolerance in its round, how could the share outside tolerance across all installed meters have changed?",
+    "options": [
+      "It had to rise.",
+      "It had to fall.",
+      "Falling and holding steady were both possible, and a rise was ruled out.",
+      "A rise, a fall and an unchanged share are all possible."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "In each of its two rounds, the water board's frame consisted of the same 120 installed meters.",
+          "The replacement budget covered twenty meters in each round, regardless of their test results.",
+          "In spring the crew obtained readings on 110 meters, of which 26 read outside tolerance.",
+          "In autumn the crew obtained readings on 108 meters, of which 10 read outside tolerance."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "Spring had at least 26 meters outside tolerance. Even if all 12 unmeasured autumn meters were outside tolerance, autumn would have only 22. Both shares have denominator 120."
+      },
+      {
+        "sentences": [
+          "In each of its two rounds, the water board's frame consisted of the same 120 installed meters.",
+          "The replacement budget covered twenty meters in each round, regardless of their test results.",
+          "In spring the crew obtained readings on 110 meters, of which 26 read outside tolerance.",
+          "In autumn the crew obtained readings on 108 meters, of which 13 read outside tolerance."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "why": "With all 12 unmeasured autumn meters outside tolerance, the autumn count reaches 25. Even this upper bound is below the spring minimum of 26 out of the same 120 meters."
+      }
+    ]
+  }
+]

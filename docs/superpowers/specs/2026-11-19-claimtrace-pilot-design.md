@@ -27,3 +27,9 @@ My proposed scoring rule is one pass per pair. For each response, a grader check
 The pilot deliverables are six prompts, separate answer keys, and one worked scorecard using explicitly labeled example responses. Check the keys against the excerpts and try plausible wrong answers before calling a case usable. The project owner can delegate all case review. The eventual release could add a model runner and grow to 30 pairs if the pilot yields clear judgments.
 
 The builder can choose file formats and filenames. The first pilot should be usable by copying a prompt into a chat and grading the response from the key. A hosted service, API credentials, and an automated judge are outside the pilot scope.
+
+## Expanded comparison approved November 19
+
+The six open-response packets remain the qualitative pilot. The requested expansion adds 30 matched pairs across six skills so the benchmark can measure differences among models. Each model selects a conclusion and identifies the numbered records that support it. This structured track can be scored locally without a human or model judge.
+
+Development runs revealed a floor in the original exact-pair metric. The comparison therefore reports a continuous evidence score, conclusion accuracy, and strict pair passes. Two answer orderings check sensitivity to presentation. See the implementation plan and the calibration report in the repository for the measured results and limits.

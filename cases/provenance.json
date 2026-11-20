@@ -1,0 +1,533 @@
+[
+  {
+    "id": "p01",
+    "skill": "source lineage",
+    "tier": "anchor",
+    "question": "Which source supplied the May and June average waits printed in the Valley Post? Cite the sentences that trace both figures to their source.",
+    "options": [
+      "The clinic’s bulletin supplied both averages.",
+      "The Echo’s own observations supplied both averages.",
+      "The clinic supplied May’s average and the Echo measured June’s.",
+      "The Echo measured May’s average and the clinic supplied June’s."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The Valley Post reported that average waiting time at Larch Clinic fell from 50 minutes in May to 35 in June.",
+          "The Post attributed both monthly figures to the clinic’s bulletin.",
+          "The neighboring Echo had printed both averages from the clinic’s bulletin on its health page.",
+          "The Echo also interviewed patients in the waiting room for that page."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            2
+          ]
+        ],
+        "why": "The Post identifies the bulletin as the source of both figures. The Echo’s interviews supply no separate monthly average."
+      },
+      {
+        "sentences": [
+          "The Valley Post reported that average waiting time at Larch Clinic fell from 50 minutes in May to 35 in June.",
+          "The Post attributed both monthly figures to the Echo’s health page.",
+          "The neighboring Echo had printed both averages from the clinic’s bulletin on its health page.",
+          "The Echo also interviewed patients in the waiting room for that page."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            2,
+            3
+          ]
+        ],
+        "why": "The Post points to the Echo and the Echo points to the bulletin. The two stories share the clinic’s figures."
+      }
+    ]
+  },
+  {
+    "id": "p02",
+    "skill": "scope of verification",
+    "tier": "anchor",
+    "question": "Which of the Valley Post’s two factual claims did its reporter verify firsthand? Cite the sentences that account for both claims.",
+    "options": [
+      "Both the opening of the desk and the decline in average waits.",
+      "The decline in average waits alone.",
+      "The opening of the desk alone.",
+      "Neither the opening of the desk nor the decline in average waits."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The Valley Post wrote that Larch Clinic opened a second reception desk and that average waiting time fell from 50 minutes in May to 35 in June.",
+          "The reporter learned of the desk opening by phone from the clinic manager after the event.",
+          "A photograph supplied by the clinic accompanied the story.",
+          "For the decline in waits, the reporter relied entirely on the clinic’s announcement."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            2,
+            4
+          ]
+        ],
+        "why": "The clinic supplied both the account of the opening and the numerical claim. Its photograph does not make the reporter an eyewitness."
+      },
+      {
+        "sentences": [
+          "The Valley Post wrote that Larch Clinic opened a second reception desk and that average waiting time fell from 50 minutes in May to 35 in June.",
+          "The reporter watched the second desk open and its clerk begin checking in patients.",
+          "A photograph supplied by the clinic accompanied the story.",
+          "For the decline in waits, the reporter relied entirely on the clinic’s announcement."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            2,
+            4
+          ]
+        ],
+        "why": "The reporter saw the new desk open. The clinic still supplied the waiting-time figures, and watching the desk open does not establish what caused the decline."
+      }
+    ]
+  },
+  {
+    "id": "p03",
+    "skill": "source lineage",
+    "tier": "intermediate",
+    "question": "Which underlying counts supplied the two stories’ ferry totals? Cite the links between each story, its file and the count in that file.",
+    "options": [
+      "Harbor Watch used the stewards’ count and Sound Desk used the operator’s.",
+      "Both stories used the ferry operator’s turnstile count.",
+      "Both stories used the ramp stewards’ hand count.",
+      "Harbor Watch used the operator’s count and Sound Desk used the stewards’."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "Harbor Watch attributed its Founders’ Day total of 412 boardings to municipal file M17.",
+          "The ramp stewards conducted a hand count of boardings that day while the ferry’s turnstile was operating.",
+          "The ferry operator invoices the city for 412 boardings on Founders’ Day without naming the file it used.",
+          "The city compiled M17 from the operator’s turnstile tape.",
+          "Sound Desk printed the same total, crediting file S4 in the pier archive.",
+          "The pier archive describes S4 as a scan of the operator’s turnstile tape."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            4,
+            5,
+            6
+          ]
+        ],
+        "why": "M17 and S4 both derive from the turnstile. The stewards made another count, but neither story used it."
+      },
+      {
+        "sentences": [
+          "Harbor Watch attributed its Founders’ Day total of 412 boardings to municipal file M17.",
+          "The ramp stewards conducted a hand count of boardings that day while the ferry’s turnstile was operating.",
+          "The ferry operator invoices the city for 412 boardings on Founders’ Day without naming the file it used.",
+          "The city compiled M17 from the operator’s turnstile tape.",
+          "Sound Desk printed the same total, crediting file S4 in the pier archive.",
+          "The pier archive describes S4 as a scan of the ramp stewards’ original hand-count sheets."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            4,
+            5,
+            6
+          ]
+        ],
+        "why": "M17 carries the turnstile reading, while S4 preserves the hand count. Equal totals and archival copies are compatible with two separate counts."
+      }
+    ]
+  },
+  {
+    "id": "p04",
+    "skill": "scope of verification",
+    "tier": "intermediate",
+    "question": "In the off-site recovery drill, which items did the inspector verify could be read or played? Cite the sentences establishing what she tested for each item.",
+    "options": [
+      "Only the marked score.",
+      "Both the marked score and the rehearsal tape.",
+      "Only the rehearsal tape.",
+      "Neither the marked score nor the rehearsal tape."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The conservatory said a marked score could be read and a rehearsal tape could be played from its off-site backup.",
+          "In the recovery drill, the inspector opened the backup score and compared its penciled bass line with a reference photograph.",
+          "For the backup tape, she transcribed its title and duration from the catalog without playing the file.",
+          "A storage-center inventory from the previous week also listed both items."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            2,
+            3
+          ]
+        ],
+        "why": "Reading the bass line tested the score. The title and duration came from a catalog, which says nothing about successful playback in the drill."
+      },
+      {
+        "sentences": [
+          "The conservatory said a marked score could be read and a rehearsal tape could be played from its off-site backup.",
+          "In the recovery drill, the inspector opened the backup score and compared its penciled bass line with a reference photograph.",
+          "For the backup tape, she played the file and compared its opening bars with the catalog description.",
+          "A storage-center inventory from the previous week also listed both items."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            2,
+            3
+          ]
+        ],
+        "why": "The inspector read the score and heard the tape. Each item was usable at least to the extent exercised in the drill."
+      }
+    ]
+  },
+  {
+    "id": "p05",
+    "skill": "source lineage",
+    "tier": "intermediate",
+    "question": "Which instruments supplied the crest readings published by the Northbank bulletin, Wharf Gazette and harbor club yearbook? Cite the chain for each publication.",
+    "options": [
+      "The club gauge supplied the bulletin and Gazette, and the board gauge supplied the yearbook.",
+      "The board gauge supplied the bulletin, and the club gauge supplied the Gazette and yearbook.",
+      "The board gauge supplied the bulletin and Gazette, and the club gauge supplied the yearbook.",
+      "The board gauge supplied the bulletin and yearbook, and the club gauge supplied the Gazette."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The Northbank bulletin labels its 2.4-meter crest reading N-8, and the Wharf Gazette credits G-4 for its reading.",
+          "N-8 records the peak from the water board’s float gauge at Lock Eight.",
+          "The Wharf Gazette also publishes the pilot station’s tide forecast under code F-4.",
+          "The harbor club yearbook gives its crest reading under accession C-6.",
+          "G-4 is a newspaper clipping of the crest entry in N-8.",
+          "Port archive file R-2 is a microfilm image of N-8.",
+          "C-6 records the peak from the harbor club’s own gauge at the boathouse."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "why": "G-4 copies N-8, so the two papers share the board gauge. The yearbook has the boathouse gauge as a separate source."
+      },
+      {
+        "sentences": [
+          "The Northbank bulletin labels its 2.4-meter crest reading N-8, and the Wharf Gazette credits G-4 for its reading.",
+          "N-8 records the peak from the water board’s float gauge at Lock Eight.",
+          "The Wharf Gazette also publishes the pilot station’s tide forecast under code F-4.",
+          "The harbor club yearbook gives its crest reading under accession C-6.",
+          "G-4 is a newspaper clipping of the crest entry in port archive file R-2.",
+          "Port archive file R-2 is a microfilm image of N-8.",
+          "C-6 records the peak from the harbor club’s own gauge at the boathouse."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "why": "The Gazette’s clipping goes through R-2 to N-8 and the board gauge. The additional copy leaves the yearbook as the sole publication here using the club gauge."
+      }
+    ]
+  },
+  {
+    "id": "p06",
+    "skill": "scope of verification",
+    "tier": "intermediate",
+    "question": "For which loads do the auditor’s extracts verify receipt by the pantry before noon? Cite the stamp convention and the entries that settle both loads.",
+    "options": [
+      "Fen alone.",
+      "Both Haw and Fen.",
+      "Neither Haw nor Fen.",
+      "Haw alone."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The carrier said its Haw and Fen loads had both reached the island pantry before noon.",
+          "For Fen the auditor copied a violet stamp timed 11:55.",
+          "Violet means a driver took custody at the depot, while green means a pantry worker took custody at the island.",
+          "The auditor’s Haw extract shows a green stamp timed 11:40.",
+          "Both extracts bear the signatures of the people who took custody."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "why": "The green stamp puts Haw in pantry custody before noon. Fen’s violet stamp records dispatch, leaving its arrival time open."
+      },
+      {
+        "sentences": [
+          "The carrier said its Haw and Fen loads had both reached the island pantry before noon.",
+          "For Fen the auditor copied a green stamp timed 11:55.",
+          "Violet means a driver took custody at the depot, while green means a pantry worker took custody at the island.",
+          "The auditor’s Haw extract shows a green stamp timed 11:40.",
+          "Both extracts bear the signatures of the people who took custody."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "why": "Both entries document transfer to a pantry worker, and both times precede noon."
+      }
+    ]
+  },
+  {
+    "id": "p07",
+    "skill": "source lineage",
+    "tier": "stretch",
+    "question": "Whose stall counts did the council ledger and the Beacon actually publish on August 10? Cite the issue history and the source links needed to identify both counts.",
+    "options": [
+      "The ledger used the inspector’s count and the Beacon used the guild’s.",
+      "Both publications used the stallholders’ guild’s count.",
+      "The ledger used the guild’s count and the Beacon used the inspector’s.",
+      "Both publications used the market inspector’s count."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The council ledger’s August 10 entry credits tally sheet H for its 18 active stalls.",
+          "The Beacon’s August 10 story credits market sheet M as it stood at the opening bell.",
+          "The market office switched M from issue 1 to issue 2 at 3 p.m., between the opening and closing bells.",
+          "Issue 1 transcribes a separate count the stallholders’ guild made during its own circuit of the market.",
+          "The Beacon’s closing edition repeated its morning weather table with a new headline.",
+          "H contains the market inspector’s count from a walk past all the stalls.",
+          "Issue 2 reproduces H with the stall numbers rearranged in street order.",
+          "Both issues of M give the same total of 18."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "why": "The opening-bell issue was issue 1, based on the guild’s circuit. The ledger cites H, based on the inspector’s walk."
+      },
+      {
+        "sentences": [
+          "The council ledger’s August 10 entry credits tally sheet H for its 18 active stalls.",
+          "The Beacon’s August 10 story credits market sheet M as it stood at the closing bell.",
+          "The market office switched M from issue 1 to issue 2 at 3 p.m., between the opening and closing bells.",
+          "Issue 1 transcribes a separate count the stallholders’ guild made during its own circuit of the market.",
+          "The Beacon’s closing edition repeated its morning weather table with a new headline.",
+          "H contains the market inspector’s count from a walk past all the stalls.",
+          "Issue 2 reproduces H with the stall numbers rearranged in street order.",
+          "Both issues of M give the same total of 18."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            6,
+            7
+          ]
+        ],
+        "why": "The closing-bell issue was issue 2, a reordered copy of H. Both publications therefore use the inspector’s walk, although the guild also counted the stalls."
+      }
+    ]
+  },
+  {
+    "id": "p08",
+    "skill": "scope of verification",
+    "tier": "stretch",
+    "question": "Which chair shipments qualify under the council’s witness rule on this record? Cite the rule and the records needed to evaluate each shipment.",
+    "options": [
+      "Both Bay and Hill.",
+      "Hill alone.",
+      "Bay alone.",
+      "Neither Bay nor Hill."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "A shipment qualified only through a witnessed run in which its own sample sustained at least 120 kilograms for 60 consecutive seconds.",
+          "The receiving book identifies chair J as Bay’s shipment sample and chair K as Hill’s.",
+          "The only runs the witness attended and signed were 41 with chair J and 42 with chair K.",
+          "The logger recorded run 41 at 125 kilograms for 70 continuous seconds.",
+          "The manufacturer’s certificate rates both chairs for 130 kilograms in routine use.",
+          "Run 42 held 122 kilograms for 35 seconds, dipped to 118 for 5 seconds and held 122 for 35 more before the run ended.",
+          "The operator also credited Hill with an uninterrupted 90-second run at 125 kilograms on run sheet 43."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "why": "Bay’s signed run clears both thresholds. Hill’s signed run never stays above the minimum for a full minute. Run 43 lacks the required witness."
+      },
+      {
+        "sentences": [
+          "A shipment qualified only through a witnessed run in which its own sample sustained at least 120 kilograms for 60 consecutive seconds.",
+          "The receiving book identifies chair J as Bay’s shipment sample and chair K as Hill’s.",
+          "The only runs the witness attended and signed were 41 with chair J and 42 with chair K.",
+          "The logger recorded run 41 at 125 kilograms for 70 continuous seconds.",
+          "The manufacturer’s certificate rates both chairs for 130 kilograms in routine use.",
+          "Run 42 held 122 kilograms for 35 seconds, rose to 124 for 5 seconds and held 122 for 35 more before the run ended.",
+          "The operator also credited Hill with an uninterrupted 90-second run at 125 kilograms on run sheet 43."
+        ],
+        "answer": 1,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "why": "Bay clears the thresholds in run 41. All 75 seconds of Hill’s signed run 42 meet the load minimum, including the five seconds at 124 kilograms."
+      }
+    ]
+  },
+  {
+    "id": "p09",
+    "skill": "source lineage",
+    "tier": "stretch",
+    "question": "Which accounts trace their east-passage width to a field measurement of that passage made after the rehang? Cite the records that date and identify each account’s underlying reading.",
+    "options": [
+      "Both the works office and the tenants’ bulletin.",
+      "The works office alone.",
+      "Neither the works office nor the tenants’ bulletin.",
+      "The tenants’ bulletin alone."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The crew completed the rehang of both terminal doors at 4 p.m. on Tuesday, May 13.",
+          "For the reported east-passage width, the works office credits card P-14 and the tenants’ bulletin credits card M-32.",
+          "P-14 transcribes the surveyor’s tape reading in the east passage at 9 a.m. on Tuesday, May 13.",
+          "The works office dated the fair copy of P-14 on the morning after the rehang.",
+          "The survey register assigns station 9 to the east passage and station 7 to the west passage.",
+          "The return visit at 10 a.m. on Wednesday, May 14, produced the field cards in series M.",
+          "On M-32 the surveyor entered a fresh tape reading for station 9 and copied the pre-rehang reading for station 7."
+        ],
+        "answer": 4,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "why": "P-14’s reading predates completion. M-32 contains a fresh reading at east station 9 from the next morning, so only the bulletin reaches a post-rehang measurement of that passage."
+      },
+      {
+        "sentences": [
+          "The crew completed the rehang of both terminal doors at 4 p.m. on Tuesday, May 13.",
+          "For the reported east-passage width, the works office credits card P-14 and the tenants’ bulletin credits card M-32.",
+          "P-14 transcribes the surveyor’s tape reading in the east passage at 9 a.m. on Tuesday, May 13.",
+          "The works office dated the fair copy of P-14 on the morning after the rehang.",
+          "The survey register assigns station 9 to the east passage and station 7 to the west passage.",
+          "The return visit at 10 a.m. on Wednesday, May 14, produced the field cards in series M.",
+          "On M-32 the surveyor entered a fresh tape reading for station 7 and copied the pre-rehang reading for station 9."
+        ],
+        "answer": 3,
+        "evidence": [
+          [
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        ],
+        "why": "The works office reaches Tuesday morning’s reading, and the bulletin reaches the old reading copied for east station 9. Reissuing that value on a field card does not date the underlying measurement to the return visit."
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "skill": "scope of verification",
+    "tier": "stretch",
+    "question": "Which of the town’s two claimed minimum counts could the dinner examiner verify from the records? Cite the sentences needed to assess both counts.",
+    "options": [
+      "The minimum count of ward residents alone.",
+      "The minimum count of distinct guests alone.",
+      "Both the minimum guest count and the minimum ward-resident count.",
+      "Neither the minimum guest count nor the minimum ward-resident count."
+    ],
+    "variants": [
+      {
+        "sentences": [
+          "The town said Thursday’s dinner drew at least 100 distinct guests, at least 70 of whom lived in the ward.",
+          "The examiner counted 108 admission stubs in the box at the door.",
+          "The catering invoice lists 119 dinners served that evening, including second helpings.",
+          "After merging stubs bearing the same wristband number, the examiner counted 102 different numbers.",
+          "The door clerk certified that each guest received just one numbered wristband for the evening and could deposit stubs only for that band.",
+          "The sole address record was a survey with 76 responses giving an in-ward home address on forms that carried no guest identifiers and allowed repeat submissions."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            4,
+            5,
+            6
+          ]
+        ],
+        "why": "The 102 different numbers require at least 102 guests under the clerk’s one-band rule. The anonymous responses may include repeats, so 76 forms cannot verify 70 distinct residents."
+      },
+      {
+        "sentences": [
+          "The town said Thursday’s dinner drew at least 100 distinct guests, at least 70 of whom lived in the ward.",
+          "The examiner counted 108 admission stubs in the box at the door.",
+          "The catering invoice lists 119 dinners served that evening, including second helpings.",
+          "After merging stubs bearing the same wristband number, the examiner counted 102 different numbers.",
+          "The door clerk certified that each guest received just one numbered wristband for the evening and could deposit stubs only for that band.",
+          "The sole address record was a survey linking 76 different guest wristbands to in-ward addresses given in response to a request for the address of each guest’s host."
+        ],
+        "answer": 2,
+        "evidence": [
+          [
+            1,
+            4,
+            5,
+            6
+          ]
+        ],
+        "why": "The one-band rule and 102 different numbers verify the guest minimum. The 76 linked addresses locate hosts, so the record cannot establish that 70 guests themselves lived in the ward."
+      }
+    ]
+  }
+]
