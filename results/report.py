@@ -67,6 +67,7 @@ def main():
     runs = load_runs(bank)
     means = {}
     totals = []
+    diagnostics = []
     skills = {}
     tiers = {}
     paired_verdicts = []
@@ -96,15 +97,21 @@ def main():
         paired_verdicts.append([name, f"{paired[True]}/42", f"{paired[False]}/18"])
         verdicts = sum(x["verdict"] for x in packets)
         strict = sum(first["pairs"].values()) + sum(second["pairs"].values())
-        totals.append([name, *(f"{mean(r['pair_credit'].values()):.1%}" for r in (first, second)),
-                       f"{mean(credits.values()):.1%}", f"{verdicts}/120", f"{strict}/60", f"{same}/{len(reshuffled)}", f"{cite_all:.1%}",
-                       sum(x["status"] == "invalid" for x in packets)])
+        totals.append([name, f"{mean(credits.values()):.1%}", f"{verdicts}/120", f"{strict}/60"])
+        diagnostics.append([
+            name, *(f"{mean(r['pair_credit'].values()):.1%}" for r in (first, second)),
+            f"{same}/{len(reshuffled)}", f"{cite_all:.1%}",
+            sum(x["status"] == "invalid" for x in packets),
+        ])
     print("### Model scores\n")
-    table(["Model (Q4_K_M)", "Evidence, order 41", "Evidence, order 107", "Mean evidence",
-           "Correct verdicts", "Strict pair passes", "Same choice on reshuffled packets", "Same verdicts, cite all", "Invalid"], totals)
-    print("The cite-all column keeps each observed verdict and substitutes every numbered record "
-          "for the model’s citations. The agreement column excludes packets with identical "
-          "option order in both runs.\n")
+    table(["Model (Q4_K_M)", "Mean evidence score", "Correct verdicts", "Strict pair passes"], totals)
+    print("Each model answered 60 prompts twice. The strict rule requires a correct verdict "
+          "and exact citations on both variants in the same ordering.\n")
+    print("### Answer order and citation selection\n")
+    table(["Model", "Evidence, seed 41", "Evidence, seed 107", "Choice retained",
+           "Same verdicts, cite all", "Invalid"], diagnostics)
+    print("Choice retention counts the 55 packets whose options changed order. The cite-all "
+          "column preserves each model's verdict and replaces its citations with every record.\n")
     print("### Does the model follow a change in the evidence?\n")
     print("Both verdicts must be correct within a pair and ordering. A fixed semantic answer "
           "cannot pass a pair whose supported conclusion changes. Invariant pairs test whether "
@@ -137,7 +144,7 @@ def main():
                        else "Split"] += 1
     print("### Where the benchmark separates these runs\n")
     print(f"After averaging the two orderings within each model, {profile['Near floor']} of 30 pairs "
-          f"are near the evidence-score floor, {profile['Near ceiling']} are near the ceiling, "
+          f"fall near the evidence-score floor, {profile['Near ceiling']} are near the ceiling, "
           f"and {profile['Interior']} fall between those thresholds. Under the strict rule, "
           f"{strict_profile['Always failed']} pairs failed in every run, "
           f"{strict_profile['Always passed']} passed in every run, and "

@@ -1,21 +1,38 @@
-# Local calibration
+# Calibration results
 
-Four quantized instruction models answered each of 60 packets twice, for 480 responses. Both administrations used fresh, single-turn contexts. Changing the benchmark seed shuffled the choices and the packet order. The same underlying 30 scenarios appear in both administrations.
+Four local instruction models answered 60 prompts under two orderings. Those **480 responses cover 30 distinct scenarios**. The headline measure is the mean evidence score, which gives citation credit only for a correct conclusion. [Benchmark and scoring rules](../README.md#how-scoring-works)
 
-The evidence score awards citation overlap only when the conclusion is correct. Average the two variants and both orders within each pair before comparing models. The unit of resampling is a scenario pair. Each skill profile rests on five pairs. Differences and intervals below are descriptive, with no multiple-comparison adjustment.
+Gemma 3 12B scored **37.6%**, compared with **20.8%** for Qwen2.5 0.5B. Two of the six paired comparisons had 95% bootstrap intervals entirely above zero. The other four intervals included zero. The largest source of the observed differences was the choice of conclusion. Holding each model's verdicts fixed, its citations improved its score by only 0.3 to 2.8 percentage points over citing every record.
 
-The clearest observed gap was 16.8 percentage points between Gemma 3 12B and Qwen2.5 0.5B. Its paired bootstrap interval was +5.7 to +27.5 points. The 3.2-point gap between Gemma 3 4B and Qwen2.5 3B had an interval of −5.0 to +12.1 points. The benchmark separated some configurations while leaving close comparisons unresolved. Across models, using the selected citations improved the evidence score by only 0.3 to 2.8 points over citing every record with the same verdicts. Most of the observed separation therefore came from choosing the supported conclusion.
+## Reading the comparisons
+
+![Six differences in mean evidence score with 95% paired bootstrap intervals. The Gemma 3 12B comparisons with both Qwen models exclude zero.](paired-differences.png)
+
+Each dot is the first named model's score minus the second's. For each scenario, we averaged the two variants and both orderings before taking the difference. The intervals resample the 30 scenarios with replacement 2,000 times. They describe variation across the authored scenarios and use no adjustment for the six comparisons. The [matched comparisons table](#matched-comparisons) gives the exact values.
+
+## Detailed results
 
 ### Model scores
 
-| Model (Q4_K_M) | Evidence, order 41 | Evidence, order 107 | Mean evidence | Correct verdicts | Strict pair passes | Same choice on reshuffled packets | Same verdicts, cite all | Invalid |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Qwen2.5 0.5B | 21.1% | 20.6% | 20.8% | 34/120 | 1/60 | 28/55 | 19.7% | 0 |
-| Qwen2.5 3B | 26.0% | 23.0% | 24.5% | 40/120 | 0/60 | 28/55 | 23.6% | 0 |
-| Gemma 3 4B | 27.0% | 28.5% | 27.7% | 45/120 | 2/60 | 36/55 | 27.4% | 0 |
-| Gemma 3 12B | 38.5% | 36.7% | 37.6% | 59/120 | 0/60 | 34/55 | 34.8% | 0 |
+| Model (Q4_K_M) | Mean evidence score | Correct verdicts | Strict pair passes |
+| --- | --- | --- | --- |
+| Qwen2.5 0.5B | 20.8% | 34/120 | 1/60 |
+| Qwen2.5 3B | 24.5% | 40/120 | 0/60 |
+| Gemma 3 4B | 27.7% | 45/120 | 2/60 |
+| Gemma 3 12B | 37.6% | 59/120 | 0/60 |
 
-The cite-all column keeps each observed verdict and substitutes every numbered record for the model’s citations. The agreement column excludes packets with identical option order in both runs.
+Each model answered 60 prompts twice. The strict rule requires a correct verdict and exact citations on both variants in the same ordering.
+
+### Answer order and citation selection
+
+| Model | Evidence, seed 41 | Evidence, seed 107 | Choice retained | Same verdicts, cite all | Invalid |
+| --- | --- | --- | --- | --- | --- |
+| Qwen2.5 0.5B | 21.1% | 20.6% | 28/55 | 19.7% | 0 |
+| Qwen2.5 3B | 26.0% | 23.0% | 28/55 | 23.6% | 0 |
+| Gemma 3 4B | 27.0% | 28.5% | 36/55 | 27.4% | 0 |
+| Gemma 3 12B | 38.5% | 36.7% | 34/55 | 34.8% | 0 |
+
+Choice retention counts the 55 packets whose options changed order. The cite-all column preserves each model's verdict and replaces its citations with every record.
 
 ### Does the model follow a change in the evidence?
 
@@ -60,7 +77,7 @@ Both verdicts must be correct within a pair and ordering. A fixed semantic answe
 
 ### Where the benchmark separates these runs
 
-After averaging the two orderings within each model, 1 of 30 pairs are near the evidence-score floor, 0 are near the ceiling, and 29 fall between those thresholds. Under the strict rule, 28 pairs failed in every run, 0 passed in every run, and 2 had mixed outcomes.
+After averaging the two orderings within each model, 1 of 30 pairs fall near the evidence-score floor, 0 are near the ceiling, and 29 fall between those thresholds. Under the strict rule, 28 pairs failed in every run, 0 passed in every run, and 2 had mixed outcomes.
 
 On 18 pairs the highest and lowest model scores differed by at least 25 percentage points. The following three had the widest observed spread. These examples were selected after scoring.
 
@@ -72,14 +89,30 @@ On 18 pairs the highest and lowest model scores differed by at least 25 percenta
 
 Citing every record yields 73.2% mean citation F1. Coupled with a uniformly random choice, that strategy earns an expected 18.3% evidence score. The expected verdict accuracy for random choice is 25%.
 
-## Interpretation and reproducibility
+## Scope and limitations
 
-The first draft exposed a floor in strict pair passing. We adopted the partial-credit evidence score after observing that floor. An independent model reviewer checked the original cases. We clarified one ambiguous matching claim, added context that readers need to exclude, and removed a sample answer from the formatting instructions. The tables use fresh responses to the revised packets. The two orders repeat the same material and these are development results. A claim about fine rankings or frontier models would require additional models and new cases held out from this development cycle.
+- A pair falls near the floor when every model averages at most 10% on its two variants across both orders. A pair falls near the ceiling when every model averages at least 90%. An interior pair can still give similar scores to all four models.
+- The six skill profiles each cover five pairs. The authored difficulty bands contain eight anchor, ten intermediate, and twelve stretch pairs. Their measured ordering varies by model.
+- This is a development calibration on four quantized configurations. We adopted partial-credit scoring after early runs exposed a floor in strict pair passing. We also clarified a matching claim, added plausible background records, and removed a sample answer from the prompt. The published responses use the revised packets. Evaluation on unseen cases and frontier models remains open.
 
-Each model ran locally using llama.cpp build b12556, Q4_K_M weights, temperature 0, a 2,048-token context, a single slot, a 110-token generation cap, server seed 41, and JSON Schema constrained decoding. The two order seeds were 41 and 107. The schema specified an answer letter and an array of integers. It supplied no answer key or evidence numbers. All eight JSONL files contain the raw returned assistant content. To reproduce the tables, run the command below from the repository root.
+## Reproduce the report
+
+From the repository root, regenerate the tables with the Python standard library. The script checks model identity, prompt seed, decoding settings, and the benchmark fingerprint before calculating scores.
 
 ~~~sh
 python3 results/report.py
 ~~~
+
+To regenerate the figure in an environment with Matplotlib installed, run `python3 results/plot_comparisons.py`. The benchmark CLI and table generator use only the standard library.
+
+| Local run setting | Value |
+| --- | --- |
+| Inference runtime | llama.cpp b12556, one slot |
+| Weights | Q4_K_M instruction models |
+| Context and generation limits | 2,048 tokens of context, 110 generated tokens |
+| Decoding | Temperature 0, JSON Schema constrained, server seed 41 |
+| Administration | One prompt per fresh message list, benchmark seeds 41 and 107 |
+
+The schema specified an answer letter and an array of integers. The raw assistant text, served model identity, and finish reason are retained for each response. [Seed 41 responses](local-pilot/) · [Seed 107 responses](order-check/)
 
 The tested weight revisions are [Qwen2.5 0.5B](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/tree/9217f5db79a29953eb74d5343926648285ec7e67), [Qwen2.5 3B](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/tree/7dabda4d13d513e3e842b20f0d435c732f172cbe), [Gemma 3 4B](https://huggingface.co/ggml-org/gemma-3-4b-it-GGUF/tree/d0976223747697cb51e056d85c532013931fe52e), and [Gemma 3 12B](https://huggingface.co/ggml-org/gemma-3-12b-it-GGUF/tree/ec0cbabd8dbff316f659876a50202295c3c4a314). The runtime is available from the [llama.cpp release](https://github.com/ggml-org/llama.cpp/releases/tag/b12556).
