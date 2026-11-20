@@ -4,6 +4,17 @@ ClaimTrace tests whether a language model can trace a conclusion to the records 
 
 **30 matched pairs · 60 prompts · 6 evidence skills.** One record changes within each pair. In 21 pairs the change warrants a different conclusion. In nine the same conclusion still holds. Each variant goes into a fresh conversation.
 
+## Small-model results
+
+Four locally run Qwen and Gemma models, ranging from 0.5B to 12B parameters, each answered 60 prompts in two orderings. The mean evidence score credits a correct conclusion in proportion to how accurately the model cites the supporting records.
+
+| Model (Q4_K_M) | Mean evidence score | Correct verdicts | Strict pair passes |
+| --- | --- | --- | --- |
+| Qwen2.5 0.5B | 20.8% | 34/120 | 1/60 |
+| Qwen2.5 3B | 24.5% | 40/120 | 0/60 |
+| Gemma 3 4B | 27.7% | 45/120 | 2/60 |
+| Gemma 3 12B | 37.6% | 59/120 | 0/60 |
+
 ## Reproduce a comparison
 
 From the repository root, run the command below with Python 3.9 or newer. It scores the four saved model runs for the default ordering using only the Python standard library. Model weights and API credentials are unnecessary for this step.
@@ -50,6 +61,21 @@ Four quantized models answered every prompt under two orderings, producing **480
 ![Six pairwise differences in mean evidence score. Only the Gemma 3 12B comparisons with Qwen2.5 0.5B and 3B have intervals wholly above zero.](results/paired-differences.png)
 
 Under strict pair scoring, every model failed the same 28 of 30 pairs in both orderings. The evidence score credits partial citation overlap when the conclusion is correct. These development results describe the four tested configurations. Each skill has five pairs, and performance on frontier models remains unmeasured. [Read the calibration report and numerical intervals](results/README.md)
+
+### Evidence score by skill
+
+Each row covers five matched pairs. The two middle models scored within 3.2 percentage points overall, but showed different strengths. Qwen2.5 3B scored higher on source lineage, while Gemma 3 4B scored higher on denominators and coverage.
+
+| Evidence skill | Qwen2.5 0.5B | Qwen2.5 3B | Gemma 3 4B | Gemma 3 12B |
+| --- | --- | --- | --- | --- |
+| causal attribution | 10.0% | 23.1% | 13.6% | 47.3% |
+| conflicting records | 41.0% | 40.7% | 48.6% | 52.1% |
+| denominators and coverage | 13.3% | 7.8% | 36.8% | 27.0% |
+| measurement independence | 15.2% | 24.4% | 15.8% | 33.6% |
+| scope of verification | 29.0% | 15.5% | 22.6% | 32.4% |
+| source lineage | 16.4% | 35.5% | 29.0% | 33.1% |
+
+[Detailed results, including answer-order effects, difficulty tiers, and paired intervals](results/README.md#detailed-results)
 
 ## How scoring works
 
